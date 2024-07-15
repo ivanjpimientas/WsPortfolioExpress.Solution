@@ -1,0 +1,11 @@
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\bin\Debug\net8.0\WsPortfolioExpress.Common.deps.json
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\bin\Debug\net8.0\WsPortfolioExpress.Common.dll
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\bin\Debug\net8.0\WsPortfolioExpress.Common.pdb
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\WsPortfolioExpress.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\WsPortfolioExpress.Common.AssemblyInfoInputs.cache
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\WsPortfolioExpress.Common.AssemblyInfo.cs
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\WsPortfolioExpress.Common.csproj.CoreCompileInputs.cache
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\WsPortfolioExpress.Common.dll
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\refint\WsPortfolioExpress.Common.dll
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\WsPortfolioExpress.Common.pdb
+C:\Net Projects\APIs\WsPortfolioExpress.Solution\WsPortfolioExpress.Common\obj\Debug\net8.0\ref\WsPortfolioExpress.Common.dll

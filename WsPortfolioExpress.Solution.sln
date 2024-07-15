@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WsPortfolioExpress.Web", "WsPortfolioExpress.Web\WsPortfolioExpress.Web.csproj", "{02BAB7DE-8545-4671-A3B9-AF41BD79DC6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsPortfolioExpress.Common", "WsPortfolioExpress.Common\WsPortfolioExpress.Common.csproj", "{7AEC64E1-827D-4612-A662-E90805F7795F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02BAB7DE-8545-4671-A3B9-AF41BD79DC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BAB7DE-8545-4671-A3B9-AF41BD79DC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BAB7DE-8545-4671-A3B9-AF41BD79DC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BAB7DE-8545-4671-A3B9-AF41BD79DC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AEC64E1-827D-4612-A662-E90805F7795F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEC64E1-827D-4612-A662-E90805F7795F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEC64E1-827D-4612-A662-E90805F7795F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEC64E1-827D-4612-A662-E90805F7795F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04E62695-E7BB-4148-AFBC-7AFD8C4AA03A}
+	EndGlobalSection
+EndGlobal

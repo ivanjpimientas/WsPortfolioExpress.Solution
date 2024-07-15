@@ -1,0 +1,226 @@
+﻿@model BrandViewModel
+@{
+    ViewData["Title"] = "Brand Settings Site";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Brand Settings Site</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item">Brand Settings Site</li>
+                    <li class="breadcrumb-item active"></li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="m-0">Brand App Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form id="brandForm" enctype="multipart/form-data" asp-area="" asp-controller="Brands" asp-action="Update" method="post">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <div class="card card-primary card-outline">
+                                                    <div class="card-body box-profile">
+                                                        <div class="text-center">
+                                                            @{
+                                                                if (Model.Brand_icon.Length > 0)
+                                                                {
+                                                                    <img class="profile-user-img img-fluid img-circle" src="@Model.Brand_icon" alt="Brand profile picture">
+                                                                }
+                                                            }
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label asp-for="BrandIconFile" class="control-label"></label>
+                                                            <div class="custom-file">
+                                                                <input type="hidden" asp-for="Brand_icon" />
+                                                                <input type="file" asp-for="BrandIconFile" class="custom-file-input" />
+                                                                <label class="custom-file-label" for="customFile">Choose brand Icon</label>
+                                                            </div>
+                                                            <span asp-validation-for="BrandIconFile" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+
+                                                <div class="card card-primary card-outline">
+                                                    <div class="card-body box-profile">
+                                                        <div class="text-center">
+                                                            @{
+                                                                if (Model.User_icon.Length > 0)
+                                                                {
+                                                                    <img class="profile-user-img img-fluid img-circle" src="@Model.User_icon" alt="User profile picture">
+                                                                }
+                                                            }
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label asp-for="UserIconFile" class="control-label"></label>
+                                                            <div class="custom-file">
+                                                                <input type="hidden" asp-for="User_icon" />
+                                                                <input type="file" asp-for="UserIconFile" class="custom-file-input" />
+                                                                <label class="custom-file-label" for="customFile">Choose user Icon</label>
+                                                            </div>
+                                                            <span asp-validation-for="UserIconFile" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <div class="card card-primary card-outline card-outline-tabs">
+                                                    <div class="card-header p-0 border-bottom-0">
+                                                        <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Parámetros Básicos</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">Descripción Detallada</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="tab-content" id="custom-tabs-four-tabContent">
+                                                            <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                                                                <div class="col-lg-12">
+                                                                    <div class="card">
+                                                                        <div class="card-header">
+                                                                            <h5 class="m-0">Datos configuración de marca (Branding)</h5>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Guid_app" class="control-label"></label>
+                                                                                        <input asp-for="Guid_app" class="form-control" />
+                                                                                        <span asp-validation-for="Guid_app" class="text-danger"></span>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="App_title" class="control-label"></label>
+                                                                                        <input asp-for="App_title" class="form-control" />
+                                                                                        <span asp-validation-for="App_title" class="text-danger"></span>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="App_username" class="control-label"></label>
+                                                                                        <input asp-for="App_username" class="form-control" />
+                                                                                        <span asp-validation-for="App_username" class="text-danger"></span>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Footer_string" class="control-label"></label>
+                                                                                        <input asp-for="Footer_string" class="form-control" />
+                                                                                        <span asp-validation-for="Footer_string" class="text-danger"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Website_url" class="control-label"></label>
+                                                                                        <input asp-for="Website_url" class="form-control" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Facebook_url" class="control-label"></label>
+                                                                                        <input asp-for="Facebook_url" class="form-control" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Twitter_url" class="control-label"></label>
+                                                                                        <input asp-for="Twitter_url" class="form-control" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Instagram_url" class="control-label"></label>
+                                                                                        <input asp-for="Instagram_url" class="form-control" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Linkedin_url" class="control-label"></label>
+                                                                                        <input asp-for="Linkedin_url" class="form-control" />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Youtube_channel" class="control-label"></label>
+                                                                                        <input asp-for="Youtube_channel" class="form-control" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                                                                <div class="col-lg-12">
+                                                                    <div class="card">
+                                                                        <div class="card-header">
+                                                                            <h5 class="m-0">Contenido Informativo (Branding)</h5>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group light-mode">
+                                                                                    <label asp-for="Content_index" class="control-label"></label>
+                                                                                    <textarea asp-for="Content_index" class="form-control ta-subtopic"></textarea>
+                                                                                    <span asp-validation-for="Content_index" class="text-danger"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <button type="submit" id="btnSubmit" class="btn btn-block btn-info">Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+
+@section Scripts {
+    <script src="~/scripts/portfolioexpress.brands.js" crossorigin="anonymous"></script>
+}

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<CustomerViewModel>
+@{
+    ViewData["Title"] = "Index Page";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Customer Page</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Customers (Registro de Personas)</a></li>
+                    <li class="breadcrumb-item active">Inicio</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            Resumen sobre la lista de personas registradas.
+                        </p>
+
+                        <a class="btn btn-primary" asp-area="" asp-controller="Customers" asp-action="CreateEditCustomer">Add Customer</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-md-12 -->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="m-0">Registros de Personas</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-md-12">
+                            <table id="tblCustomers" class="table table-bordered table-hover dataTable dtr-inline">
+                                <thead>
+                                    <tr>
+                                        <td>#</td>
+                                        <td width="100px">Foto</td>
+                                        <td>Nombres</td>
+                                        <td>Apellidos</td>
+                                        <td>Email</td>
+                                        <td>Acciones</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                                            <td><img src="@Html.DisplayFor(modelItem => item.Imagen)" class="img-fluid"></td>
+                                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.SurName)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                            <td>
+                                                <a class="btn btn-success" asp-area="" asp-controller="Customers" asp-action="CreateEditCustomer" asp-route-id="@item.Id">Edit</a>
+                                                <a class="btn btn-danger" onclick="AddEditCustomers(@item.Id);">Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+@foreach (var item in Model)
+{
+    <div class="modal fade" id="customerFormModel-@item.Id" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="title" class="modal-title">Delete Customer</h3>
+                    <a href="#" class="close" onclick="onCloseModal(@item.Id);">×</a>
+                </div>
+                <div class="modal-body" id="customerFormModelDiv">
+                    @await Html.PartialAsync("_customerForm", item)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show" id="backdrop-@item.Id" style="display: none;"></div>
+}
